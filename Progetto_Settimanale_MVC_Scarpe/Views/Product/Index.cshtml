@@ -1,0 +1,19 @@
+﻿
+@model IEnumerable<Progetto_Settimanale_MVC_Scarpe.Models.Product>
+
+<h2>Vetrina Scarpe & Co</h2>
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="@product.CoverImage" class="card-img-top" alt="@product.Name">
+                <div class="card-body">
+                    <h5 class="card-title">@product.Name</h5>
+                    <p class="card-text">Prezzo: €@product.Price</p>
+                    <a href="@Url.Action("Details", "Product", new { id = product.Id })" class="btn btn-primary">Dettagli</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,17 @@
+﻿@model Progetto_Settimanale_MVC_Scarpe.Models.Product
+
+<h2>@Model.Name</h2>
+<p><strong>Prezzo:</strong> €@Model.Price</p>
+<p>@Model.Description</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <img src="@Model.CoverImage" class="img-fluid" alt="Copertina">
+    </div>
+    <div class="col-md-3">
+        <img src="@Model.AdditionalImage1" class="img-fluid mb-3" alt="Immagine Aggiuntiva 1">
+        <img src="@Model.AdditionalImage2" class="img-fluid" alt="Immagine Aggiuntiva 2">
+    </div>
+</div>
+
+<a class="btn btn-secondary mt-3" href="@Url.Action("Index", "Product")">Torna alla vetrina</a>
