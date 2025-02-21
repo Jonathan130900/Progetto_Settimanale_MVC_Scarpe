@@ -9,5 +9,6 @@
         public string CoverImage { get; set; }
         public string AdditionalImage1 { get; set; }
         public string AdditionalImage2 { get; set; }
+
     }
 }
